@@ -15,8 +15,19 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 @XmlRootElement(name = "persona")
 public class Persona implements Serializable {
-    private static final long serialVerisionUID = 1L;
+    //private static final long serialVerisionUID = 1L;
     private String nombre;
+    
+    private String password;
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+    
 
     public String getNombre() {
         return nombre;
