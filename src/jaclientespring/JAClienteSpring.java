@@ -22,7 +22,7 @@ public class JAClienteSpring {
         String URL_PRINCIPAL = "http://localhost:8080/WSSpringHibernateValidation/persona/";
         try {
             Persona objPersona = new Persona();
-            objPersona.setNombre("a");            
+            objPersona.setNombre("ab");            
             RestTemplate restTemplate = new RestTemplate();
             restTemplate.postForEntity(URL_PRINCIPAL + "crear", objPersona, Persona.class);
             System.out.println("Correctamente Agregado");
