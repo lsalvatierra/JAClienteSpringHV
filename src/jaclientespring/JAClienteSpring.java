@@ -27,6 +27,7 @@ public class JAClienteSpring {
             objPersona.setPassword("aB5c$cc");
             */      
             RestTemplate restTemplate = new RestTemplate();
+            //restTemplate.postForEntity(URL_PRINCIPAL, null, String.class);
             String result = restTemplate.getForObject(URL_PRINCIPAL+"E03", String.class);
             System.out.println(result);
         } catch (Exception e) {
