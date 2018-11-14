@@ -19,15 +19,16 @@ public class JAClienteSpring {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        String URL_PRINCIPAL = "http://localhost:8080/WSSpringHibernateValidation/persona/";
+        //String URL_PRINCIPAL = "http://localhost:8080/WSRestSpringBD/pagos/ListarEspecialidades";
+        String URL_PRINCIPAL = "http://localhost:8080/WSRestSpringBD/Alumno/ListarAlumnosxEspec/";
         try {
-            Persona objPersona = new Persona();
+            /*Persona objPersona = new Persona();
             objPersona.setNombre("abcc");
             objPersona.setPassword("aB5c$cc");
-                    
+            */      
             RestTemplate restTemplate = new RestTemplate();
-            restTemplate.postForEntity(URL_PRINCIPAL + "crear", objPersona, Persona.class);
-            System.out.println("Correctamente Agregado");
+            String result = restTemplate.getForObject(URL_PRINCIPAL+"E03", String.class);
+            System.out.println(result);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
